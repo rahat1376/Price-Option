@@ -21,7 +21,10 @@ const NavBar = () => {
                 }
                 
             </div>
-            <ul className="md:flex">
+            <ul className={`md:flex 
+            md:static pl-4 pt-2 text-xl
+            ${open? '': 'hidden'}
+            `}>
             {
                 routes.map(route => <Link key={route.id} route={route}></Link>)
             }
